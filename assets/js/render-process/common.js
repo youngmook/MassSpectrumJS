@@ -12,11 +12,11 @@ if(isDesktopEnvironment()) {
     let theHeadTag = document.getElementsByTagName("head")[0];
     let theJSTag = document.createElement('script');
     theJSTag.type = 'text/javascript';
-    theJSTag.src = 'assets/lib/js/jquery/jquery-3.3.1.min.js';
+    theJSTag.src = 'assets/lib/jquery/jquery-3.3.1.min.js';
     theHeadTag.appendChild(theJSTag);
 
     theJSTag = document.createElement('script');
-    theJSTag.src = 'assets/lib/js/jquery/jquery-3.3.1.min.js';
+    theJSTag.src = 'assets/lib/jquery/jquery-3.3.1.min.js';
     theHeadTag.appendChild(theJSTag);
 }
 

@@ -1,0 +1,1056 @@
+/**
+ * Mass Spectrum JS, a Mass Spectrum Viewer
+ * @author Young-Mook Kang <ymkang@thylove.org>
+ * @copyright 2018 Young-Mook Kang <ymkang@thylove.org>
+ * @license http://www.opensource.org/licenses/ISC The ISC License
+ * @repository https://github.com/youngmook/MassSpectrumJS
+ */
+
+.webix_el_button.button_raised input,
+.webix_el_toggle.button_raised input,
+.webixbutton.button_raised input,
+.webix_el_button.button_raised button,
+.webix_el_toggle.button_raised button,
+.webixbutton.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #004ea2;
+}
+.webix_el_button.button_raised input:hover,
+.webix_el_toggle.button_raised input:hover,
+.webixbutton.button_raised input:hover,
+.webix_el_button.button_raised button:hover,
+.webix_el_toggle.button_raised button:hover,
+.webixbutton.button_raised button:hover,
+.webix_el_button.button_raised input:active,
+.webix_el_toggle.button_raised input:active,
+.webixbutton.button_raised input:active,
+.webix_el_button.button_raised button:active,
+.webix_el_toggle.button_raised button:active,
+.webixbutton.button_raised button:active {
+    color: #ffffff;
+    background-color: #005abb;
+}
+.webix_el_button.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_raised input:active .webix_icon_btn,
+.webixbutton.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_raised button:active .webix_icon_btn,
+.webixbutton.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_raised input:hover .webix_badge,
+.webixbutton.button_raised input:hover .webix_badge,
+.webix_el_button.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_raised button:hover .webix_badge,
+.webixbutton.button_raised button:hover .webix_badge,
+.webix_el_button.button_raised input:active .webix_badge,
+.webix_el_toggle.button_raised input:active .webix_badge,
+.webixbutton.button_raised input:active .webix_badge,
+.webix_el_button.button_raised button:active .webix_badge,
+.webix_el_toggle.button_raised button:active .webix_badge,
+.webixbutton.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #004ea2;
+}
+.webix_el_button.button_raised input:active,
+.webix_el_toggle.button_raised input:active,
+.webixbutton.button_raised input:active,
+.webix_el_button.button_raised button:active,
+.webix_el_toggle.button_raised button:active,
+.webixbutton.button_raised button:active {
+    background-color: #004288;
+}
+.webix_el_button.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_raised input .webix_icon_btn,
+.webixbutton.button_raised input .webix_icon_btn,
+.webix_el_button.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_raised button .webix_icon_btn,
+.webixbutton.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_raised input .webix_badge,
+.webix_el_toggle.button_raised input .webix_badge,
+.webixbutton.button_raised input .webix_badge,
+.webix_el_button.button_raised button .webix_badge,
+.webix_el_toggle.button_raised button .webix_badge,
+.webixbutton.button_raised button .webix_badge {
+    background-color: #ffffff;
+    color: #004ea2;
+}
+.webix_el_button.button_primary input,
+.webix_el_toggle.button_primary input,
+.webixbutton.button_primary input,
+.webix_el_button.button_primary button,
+.webix_el_toggle.button_primary button,
+.webixbutton.button_primary button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    padding: 0px 12px;
+    box-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+}
+.webix_el_button.button_primary input:hover,
+.webix_el_toggle.button_primary input:hover,
+.webixbutton.button_primary input:hover,
+.webix_el_button.button_primary button:hover,
+.webix_el_toggle.button_primary button:hover,
+.webixbutton.button_primary button:hover,
+.webix_el_button.button_primary input:active,
+.webix_el_toggle.button_primary input:active,
+.webixbutton.button_primary input:active,
+.webix_el_button.button_primary button:active,
+.webix_el_toggle.button_primary button:active,
+.webixbutton.button_primary button:active {
+    color: #004ea2;
+    background-color: rgba(0, 78, 162, 0.2);
+}
+.webix_el_button.button_primary input:hover .webix_icon_btn,
+.webix_el_toggle.button_primary input:hover .webix_icon_btn,
+.webixbutton.button_primary input:hover .webix_icon_btn,
+.webix_el_button.button_primary button:hover .webix_icon_btn,
+.webix_el_toggle.button_primary button:hover .webix_icon_btn,
+.webixbutton.button_primary button:hover .webix_icon_btn,
+.webix_el_button.button_primary input:active .webix_icon_btn,
+.webix_el_toggle.button_primary input:active .webix_icon_btn,
+.webixbutton.button_primary input:active .webix_icon_btn,
+.webix_el_button.button_primary button:active .webix_icon_btn,
+.webix_el_toggle.button_primary button:active .webix_icon_btn,
+.webixbutton.button_primary button:active .webix_icon_btn {
+    color: #004ea2;
+}
+.webix_el_button.button_primary input:hover .webix_badge,
+.webix_el_toggle.button_primary input:hover .webix_badge,
+.webixbutton.button_primary input:hover .webix_badge,
+.webix_el_button.button_primary button:hover .webix_badge,
+.webix_el_toggle.button_primary button:hover .webix_badge,
+.webixbutton.button_primary button:hover .webix_badge,
+.webix_el_button.button_primary input:active .webix_badge,
+.webix_el_toggle.button_primary input:active .webix_badge,
+.webixbutton.button_primary input:active .webix_badge,
+.webix_el_button.button_primary button:active .webix_badge,
+.webix_el_toggle.button_primary button:active .webix_badge,
+.webixbutton.button_primary button:active .webix_badge {
+    background-color: #004ea2;
+    color: #ffffff;
+}
+.webix_el_button.button_primary input:active,
+.webix_el_toggle.button_primary input:active,
+.webixbutton.button_primary input:active,
+.webix_el_button.button_primary button:active,
+.webix_el_toggle.button_primary button:active,
+.webixbutton.button_primary button:active {
+    background-color: rgba(0, 53, 111, 0.2);
+}
+.webix_el_button.button_primary input .webix_icon_btn,
+.webix_el_toggle.button_primary input .webix_icon_btn,
+.webixbutton.button_primary input .webix_icon_btn,
+.webix_el_button.button_primary button .webix_icon_btn,
+.webix_el_toggle.button_primary button .webix_icon_btn,
+.webixbutton.button_primary button .webix_icon_btn {
+    color: #004ea2;
+}
+.webix_el_button.button_primary input .webix_badge,
+.webix_el_toggle.button_primary input .webix_badge,
+.webixbutton.button_primary input .webix_badge,
+.webix_el_button.button_primary button .webix_badge,
+.webix_el_toggle.button_primary button .webix_badge,
+.webixbutton.button_primary button .webix_badge {
+    background-color: rgba(0, 78, 162, 0.2);
+    color: #004ea2;
+}
+.webix_el_button.button_primary.button_raised input,
+.webix_el_toggle.button_primary.button_raised input,
+.webixbutton.button_primary.button_raised input,
+.webix_el_button.button_primary.button_raised button,
+.webix_el_toggle.button_primary.button_raised button,
+.webixbutton.button_primary.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #004ea2;
+}
+.webix_el_button.button_primary.button_raised input:hover,
+.webix_el_toggle.button_primary.button_raised input:hover,
+.webixbutton.button_primary.button_raised input:hover,
+.webix_el_button.button_primary.button_raised button:hover,
+.webix_el_toggle.button_primary.button_raised button:hover,
+.webixbutton.button_primary.button_raised button:hover,
+.webix_el_button.button_primary.button_raised input:active,
+.webix_el_toggle.button_primary.button_raised input:active,
+.webixbutton.button_primary.button_raised input:active,
+.webix_el_button.button_primary.button_raised button:active,
+.webix_el_toggle.button_primary.button_raised button:active,
+.webixbutton.button_primary.button_raised button:active {
+    color: #ffffff;
+    background-color: #005abb;
+}
+.webix_el_button.button_primary.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_primary.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_primary.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_primary.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_primary.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised input:active .webix_icon_btn,
+.webixbutton.button_primary.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_primary.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised button:active .webix_icon_btn,
+.webixbutton.button_primary.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_primary.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_primary.button_raised input:hover .webix_badge,
+.webixbutton.button_primary.button_raised input:hover .webix_badge,
+.webix_el_button.button_primary.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_primary.button_raised button:hover .webix_badge,
+.webixbutton.button_primary.button_raised button:hover .webix_badge,
+.webix_el_button.button_primary.button_raised input:active .webix_badge,
+.webix_el_toggle.button_primary.button_raised input:active .webix_badge,
+.webixbutton.button_primary.button_raised input:active .webix_badge,
+.webix_el_button.button_primary.button_raised button:active .webix_badge,
+.webix_el_toggle.button_primary.button_raised button:active .webix_badge,
+.webixbutton.button_primary.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #004ea2;
+}
+.webix_el_button.button_primary.button_raised input:active,
+.webix_el_toggle.button_primary.button_raised input:active,
+.webixbutton.button_primary.button_raised input:active,
+.webix_el_button.button_primary.button_raised button:active,
+.webix_el_toggle.button_primary.button_raised button:active,
+.webixbutton.button_primary.button_raised button:active {
+    background-color: #004288;
+}
+.webix_el_button.button_primary.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised input .webix_icon_btn,
+.webixbutton.button_primary.button_raised input .webix_icon_btn,
+.webix_el_button.button_primary.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_primary.button_raised button .webix_icon_btn,
+.webixbutton.button_primary.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_primary.button_raised input .webix_badge,
+.webix_el_toggle.button_primary.button_raised input .webix_badge,
+.webixbutton.button_primary.button_raised input .webix_badge,
+.webix_el_button.button_primary.button_raised button .webix_badge,
+.webix_el_toggle.button_primary.button_raised button .webix_badge,
+.webixbutton.button_primary.button_raised button .webix_badge {
+    background-color: #ff8839;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    height: 22px;
+    min-width: 22px;
+    box-sizing: border-box;
+    padding: 0 4px;
+    text-align: center;
+    line-height: 21px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    color: #004ea2;
+}
+.webix_el_button.button_success input,
+.webix_el_toggle.button_success input,
+.webixbutton.button_success input,
+.webix_el_button.button_success button,
+.webix_el_toggle.button_success button,
+.webixbutton.button_success button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    padding: 0px 12px;
+    box-shadow: none;
+    color: #388e3c;
+    background-color: transparent;
+}
+.webix_el_button.button_success input:hover,
+.webix_el_toggle.button_success input:hover,
+.webixbutton.button_success input:hover,
+.webix_el_button.button_success button:hover,
+.webix_el_toggle.button_success button:hover,
+.webixbutton.button_success button:hover,
+.webix_el_button.button_success input:active,
+.webix_el_toggle.button_success input:active,
+.webixbutton.button_success input:active,
+.webix_el_button.button_success button:active,
+.webix_el_toggle.button_success button:active,
+.webixbutton.button_success button:active {
+    color: #388e3c;
+    background-color: rgba(56, 142, 60, 0.2);
+}
+.webix_el_button.button_success input:hover .webix_icon_btn,
+.webix_el_toggle.button_success input:hover .webix_icon_btn,
+.webixbutton.button_success input:hover .webix_icon_btn,
+.webix_el_button.button_success button:hover .webix_icon_btn,
+.webix_el_toggle.button_success button:hover .webix_icon_btn,
+.webixbutton.button_success button:hover .webix_icon_btn,
+.webix_el_button.button_success input:active .webix_icon_btn,
+.webix_el_toggle.button_success input:active .webix_icon_btn,
+.webixbutton.button_success input:active .webix_icon_btn,
+.webix_el_button.button_success button:active .webix_icon_btn,
+.webix_el_toggle.button_success button:active .webix_icon_btn,
+.webixbutton.button_success button:active .webix_icon_btn {
+    color: #388e3c;
+}
+.webix_el_button.button_success input:hover .webix_badge,
+.webix_el_toggle.button_success input:hover .webix_badge,
+.webixbutton.button_success input:hover .webix_badge,
+.webix_el_button.button_success button:hover .webix_badge,
+.webix_el_toggle.button_success button:hover .webix_badge,
+.webixbutton.button_success button:hover .webix_badge,
+.webix_el_button.button_success input:active .webix_badge,
+.webix_el_toggle.button_success input:active .webix_badge,
+.webixbutton.button_success input:active .webix_badge,
+.webix_el_button.button_success button:active .webix_badge,
+.webix_el_toggle.button_success button:active .webix_badge,
+.webixbutton.button_success button:active .webix_badge {
+    background-color: #388e3c;
+    color: #ffffff;
+}
+.webix_el_button.button_success input:active,
+.webix_el_toggle.button_success input:active,
+.webixbutton.button_success input:active,
+.webix_el_button.button_success button:active,
+.webix_el_toggle.button_success button:active,
+.webixbutton.button_success button:active {
+    background-color: rgba(42, 105, 45, 0.2);
+}
+.webix_el_button.button_success input .webix_icon_btn,
+.webix_el_toggle.button_success input .webix_icon_btn,
+.webixbutton.button_success input .webix_icon_btn,
+.webix_el_button.button_success button .webix_icon_btn,
+.webix_el_toggle.button_success button .webix_icon_btn,
+.webixbutton.button_success button .webix_icon_btn {
+    color: #388e3c;
+}
+.webix_el_button.button_success input .webix_badge,
+.webix_el_toggle.button_success input .webix_badge,
+.webixbutton.button_success input .webix_badge,
+.webix_el_button.button_success button .webix_badge,
+.webix_el_toggle.button_success button .webix_badge,
+.webixbutton.button_success button .webix_badge {
+    background-color: rgba(56, 142, 60, 0.2);
+    color: #388e3c;
+}
+.webix_el_button.button_success.button_raised input,
+.webix_el_toggle.button_success.button_raised input,
+.webixbutton.button_success.button_raised input,
+.webix_el_button.button_success.button_raised button,
+.webix_el_toggle.button_success.button_raised button,
+.webixbutton.button_success.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #388e3c;
+}
+.webix_el_button.button_success.button_raised input:hover,
+.webix_el_toggle.button_success.button_raised input:hover,
+.webixbutton.button_success.button_raised input:hover,
+.webix_el_button.button_success.button_raised button:hover,
+.webix_el_toggle.button_success.button_raised button:hover,
+.webixbutton.button_success.button_raised button:hover,
+.webix_el_button.button_success.button_raised input:active,
+.webix_el_toggle.button_success.button_raised input:active,
+.webixbutton.button_success.button_raised input:active,
+.webix_el_button.button_success.button_raised button:active,
+.webix_el_toggle.button_success.button_raised button:active,
+.webixbutton.button_success.button_raised button:active {
+    color: #ffffff;
+    background-color: #3fa044;
+}
+.webix_el_button.button_success.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_success.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_success.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_success.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_success.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised input:active .webix_icon_btn,
+.webixbutton.button_success.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_success.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised button:active .webix_icon_btn,
+.webixbutton.button_success.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_success.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_success.button_raised input:hover .webix_badge,
+.webixbutton.button_success.button_raised input:hover .webix_badge,
+.webix_el_button.button_success.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_success.button_raised button:hover .webix_badge,
+.webixbutton.button_success.button_raised button:hover .webix_badge,
+.webix_el_button.button_success.button_raised input:active .webix_badge,
+.webix_el_toggle.button_success.button_raised input:active .webix_badge,
+.webixbutton.button_success.button_raised input:active .webix_badge,
+.webix_el_button.button_success.button_raised button:active .webix_badge,
+.webix_el_toggle.button_success.button_raised button:active .webix_badge,
+.webixbutton.button_success.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #388e3c;
+}
+.webix_el_button.button_success.button_raised input:active,
+.webix_el_toggle.button_success.button_raised input:active,
+.webixbutton.button_success.button_raised input:active,
+.webix_el_button.button_success.button_raised button:active,
+.webix_el_toggle.button_success.button_raised button:active,
+.webixbutton.button_success.button_raised button:active {
+    background-color: #317c34;
+}
+.webix_el_button.button_success.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised input .webix_icon_btn,
+.webixbutton.button_success.button_raised input .webix_icon_btn,
+.webix_el_button.button_success.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_success.button_raised button .webix_icon_btn,
+.webixbutton.button_success.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_success.button_raised input .webix_badge,
+.webix_el_toggle.button_success.button_raised input .webix_badge,
+.webixbutton.button_success.button_raised input .webix_badge,
+.webix_el_button.button_success.button_raised button .webix_badge,
+.webix_el_toggle.button_success.button_raised button .webix_badge,
+.webixbutton.button_success.button_raised button .webix_badge {
+    background-color: #ffffff;
+    color: #388e3c;
+}
+.webix_el_button.button_info input,
+.webix_el_toggle.button_info input,
+.webixbutton.button_info input,
+.webix_el_button.button_info button,
+.webix_el_toggle.button_info button,
+.webixbutton.button_info button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    padding: 0px 12px;
+    box-shadow: none;
+    color: #03a9f4;
+    background-color: transparent;
+}
+.webix_el_button.button_info input:hover,
+.webix_el_toggle.button_info input:hover,
+.webixbutton.button_info input:hover,
+.webix_el_button.button_info button:hover,
+.webix_el_toggle.button_info button:hover,
+.webixbutton.button_info button:hover,
+.webix_el_button.button_info input:active,
+.webix_el_toggle.button_info input:active,
+.webixbutton.button_info input:active,
+.webix_el_button.button_info button:active,
+.webix_el_toggle.button_info button:active,
+.webixbutton.button_info button:active {
+    color: #03a9f4;
+    background-color: rgba(3, 169, 244, 0.2);
+}
+.webix_el_button.button_info input:hover .webix_icon_btn,
+.webix_el_toggle.button_info input:hover .webix_icon_btn,
+.webixbutton.button_info input:hover .webix_icon_btn,
+.webix_el_button.button_info button:hover .webix_icon_btn,
+.webix_el_toggle.button_info button:hover .webix_icon_btn,
+.webixbutton.button_info button:hover .webix_icon_btn,
+.webix_el_button.button_info input:active .webix_icon_btn,
+.webix_el_toggle.button_info input:active .webix_icon_btn,
+.webixbutton.button_info input:active .webix_icon_btn,
+.webix_el_button.button_info button:active .webix_icon_btn,
+.webix_el_toggle.button_info button:active .webix_icon_btn,
+.webixbutton.button_info button:active .webix_icon_btn {
+    color: #03a9f4;
+}
+.webix_el_button.button_info input:hover .webix_badge,
+.webix_el_toggle.button_info input:hover .webix_badge,
+.webixbutton.button_info input:hover .webix_badge,
+.webix_el_button.button_info button:hover .webix_badge,
+.webix_el_toggle.button_info button:hover .webix_badge,
+.webixbutton.button_info button:hover .webix_badge,
+.webix_el_button.button_info input:active .webix_badge,
+.webix_el_toggle.button_info input:active .webix_badge,
+.webixbutton.button_info input:active .webix_badge,
+.webix_el_button.button_info button:active .webix_badge,
+.webix_el_toggle.button_info button:active .webix_badge,
+.webixbutton.button_info button:active .webix_badge {
+    background-color: #03a9f4;
+    color: #ffffff;
+}
+.webix_el_button.button_info input:active,
+.webix_el_toggle.button_info input:active,
+.webixbutton.button_info input:active,
+.webix_el_button.button_info button:active,
+.webix_el_toggle.button_info button:active,
+.webixbutton.button_info button:active {
+    background-color: rgba(2, 134, 194, 0.2);
+}
+.webix_el_button.button_info input .webix_icon_btn,
+.webix_el_toggle.button_info input .webix_icon_btn,
+.webixbutton.button_info input .webix_icon_btn,
+.webix_el_button.button_info button .webix_icon_btn,
+.webix_el_toggle.button_info button .webix_icon_btn,
+.webixbutton.button_info button .webix_icon_btn {
+    color: #03a9f4;
+}
+.webix_el_button.button_info input .webix_badge,
+.webix_el_toggle.button_info input .webix_badge,
+.webixbutton.button_info input .webix_badge,
+.webix_el_button.button_info button .webix_badge,
+.webix_el_toggle.button_info button .webix_badge,
+.webixbutton.button_info button .webix_badge {
+    background-color: rgba(3, 169, 244, 0.2);
+    color: #03a9f4;
+}
+.webix_el_button.button_info.button_raised input,
+.webix_el_toggle.button_info.button_raised input,
+.webixbutton.button_info.button_raised input,
+.webix_el_button.button_info.button_raised button,
+.webix_el_toggle.button_info.button_raised button,
+.webixbutton.button_info.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #03a9f4;
+}
+.webix_el_button.button_info.button_raised input:hover,
+.webix_el_toggle.button_info.button_raised input:hover,
+.webixbutton.button_info.button_raised input:hover,
+.webix_el_button.button_info.button_raised button:hover,
+.webix_el_toggle.button_info.button_raised button:hover,
+.webixbutton.button_info.button_raised button:hover,
+.webix_el_button.button_info.button_raised input:active,
+.webix_el_toggle.button_info.button_raised input:active,
+.webixbutton.button_info.button_raised input:active,
+.webix_el_button.button_info.button_raised button:active,
+.webix_el_toggle.button_info.button_raised button:active,
+.webixbutton.button_info.button_raised button:active {
+    color: #ffffff;
+    background-color: #14b4fc;
+}
+.webix_el_button.button_info.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_info.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_info.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_info.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_info.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised input:active .webix_icon_btn,
+.webixbutton.button_info.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_info.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised button:active .webix_icon_btn,
+.webixbutton.button_info.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_info.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_info.button_raised input:hover .webix_badge,
+.webixbutton.button_info.button_raised input:hover .webix_badge,
+.webix_el_button.button_info.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_info.button_raised button:hover .webix_badge,
+.webixbutton.button_info.button_raised button:hover .webix_badge,
+.webix_el_button.button_info.button_raised input:active .webix_badge,
+.webix_el_toggle.button_info.button_raised input:active .webix_badge,
+.webixbutton.button_info.button_raised input:active .webix_badge,
+.webix_el_button.button_info.button_raised button:active .webix_badge,
+.webix_el_toggle.button_info.button_raised button:active .webix_badge,
+.webixbutton.button_info.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #03a9f4;
+}
+.webix_el_button.button_info.button_raised input:active,
+.webix_el_toggle.button_info.button_raised input:active,
+.webixbutton.button_info.button_raised input:active,
+.webix_el_button.button_info.button_raised button:active,
+.webix_el_toggle.button_info.button_raised button:active,
+.webixbutton.button_info.button_raised button:active {
+    background-color: #0398db;
+}
+.webix_el_button.button_info.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised input .webix_icon_btn,
+.webixbutton.button_info.button_raised input .webix_icon_btn,
+.webix_el_button.button_info.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_info.button_raised button .webix_icon_btn,
+.webixbutton.button_info.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_info.button_raised input .webix_badge,
+.webix_el_toggle.button_info.button_raised input .webix_badge,
+.webixbutton.button_info.button_raised input .webix_badge,
+.webix_el_button.button_info.button_raised button .webix_badge,
+.webix_el_toggle.button_info.button_raised button .webix_badge,
+.webixbutton.button_info.button_raised button .webix_badge {
+    background-color: #ffffff;
+    color: #03a9f4;
+}
+.webix_el_button.button_warning input,
+.webix_el_toggle.button_warning input,
+.webixbutton.button_warning input,
+.webix_el_button.button_warning button,
+.webix_el_toggle.button_warning button,
+.webixbutton.button_warning button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    padding: 0px 12px;
+    box-shadow: none;
+    color: #ff9800;
+    background-color: transparent;
+}
+.webix_el_button.button_warning input:hover,
+.webix_el_toggle.button_warning input:hover,
+.webixbutton.button_warning input:hover,
+.webix_el_button.button_warning button:hover,
+.webix_el_toggle.button_warning button:hover,
+.webixbutton.button_warning button:hover,
+.webix_el_button.button_warning input:active,
+.webix_el_toggle.button_warning input:active,
+.webixbutton.button_warning input:active,
+.webix_el_button.button_warning button:active,
+.webix_el_toggle.button_warning button:active,
+.webixbutton.button_warning button:active {
+    color: #ff9800;
+    background-color: rgba(255, 152, 0, 0.2);
+}
+.webix_el_button.button_warning input:hover .webix_icon_btn,
+.webix_el_toggle.button_warning input:hover .webix_icon_btn,
+.webixbutton.button_warning input:hover .webix_icon_btn,
+.webix_el_button.button_warning button:hover .webix_icon_btn,
+.webix_el_toggle.button_warning button:hover .webix_icon_btn,
+.webixbutton.button_warning button:hover .webix_icon_btn,
+.webix_el_button.button_warning input:active .webix_icon_btn,
+.webix_el_toggle.button_warning input:active .webix_icon_btn,
+.webixbutton.button_warning input:active .webix_icon_btn,
+.webix_el_button.button_warning button:active .webix_icon_btn,
+.webix_el_toggle.button_warning button:active .webix_icon_btn,
+.webixbutton.button_warning button:active .webix_icon_btn {
+    color: #ff9800;
+}
+.webix_el_button.button_warning input:hover .webix_badge,
+.webix_el_toggle.button_warning input:hover .webix_badge,
+.webixbutton.button_warning input:hover .webix_badge,
+.webix_el_button.button_warning button:hover .webix_badge,
+.webix_el_toggle.button_warning button:hover .webix_badge,
+.webixbutton.button_warning button:hover .webix_badge,
+.webix_el_button.button_warning input:active .webix_badge,
+.webix_el_toggle.button_warning input:active .webix_badge,
+.webixbutton.button_warning input:active .webix_badge,
+.webix_el_button.button_warning button:active .webix_badge,
+.webix_el_toggle.button_warning button:active .webix_badge,
+.webixbutton.button_warning button:active .webix_badge {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+.webix_el_button.button_warning input:active,
+.webix_el_toggle.button_warning input:active,
+.webixbutton.button_warning input:active,
+.webix_el_button.button_warning button:active,
+.webix_el_toggle.button_warning button:active,
+.webixbutton.button_warning button:active {
+    background-color: rgba(204, 122, 0, 0.2);
+}
+.webix_el_button.button_warning input .webix_icon_btn,
+.webix_el_toggle.button_warning input .webix_icon_btn,
+.webixbutton.button_warning input .webix_icon_btn,
+.webix_el_button.button_warning button .webix_icon_btn,
+.webix_el_toggle.button_warning button .webix_icon_btn,
+.webixbutton.button_warning button .webix_icon_btn {
+    color: #ff9800;
+}
+.webix_el_button.button_warning input .webix_badge,
+.webix_el_toggle.button_warning input .webix_badge,
+.webixbutton.button_warning input .webix_badge,
+.webix_el_button.button_warning button .webix_badge,
+.webix_el_toggle.button_warning button .webix_badge,
+.webixbutton.button_warning button .webix_badge {
+    background-color: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+}
+.webix_el_button.button_warning.button_raised input,
+.webix_el_toggle.button_warning.button_raised input,
+.webixbutton.button_warning.button_raised input,
+.webix_el_button.button_warning.button_raised button,
+.webix_el_toggle.button_warning.button_raised button,
+.webixbutton.button_warning.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #ff9800;
+}
+.webix_el_button.button_warning.button_raised input:hover,
+.webix_el_toggle.button_warning.button_raised input:hover,
+.webixbutton.button_warning.button_raised input:hover,
+.webix_el_button.button_warning.button_raised button:hover,
+.webix_el_toggle.button_warning.button_raised button:hover,
+.webixbutton.button_warning.button_raised button:hover,
+.webix_el_button.button_warning.button_raised input:active,
+.webix_el_toggle.button_warning.button_raised input:active,
+.webixbutton.button_warning.button_raised input:active,
+.webix_el_button.button_warning.button_raised button:active,
+.webix_el_toggle.button_warning.button_raised button:active,
+.webixbutton.button_warning.button_raised button:active {
+    color: #ffffff;
+    background-color: #ffa21a;
+}
+.webix_el_button.button_warning.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_warning.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_warning.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_warning.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_warning.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised input:active .webix_icon_btn,
+.webixbutton.button_warning.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_warning.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised button:active .webix_icon_btn,
+.webixbutton.button_warning.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_warning.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_warning.button_raised input:hover .webix_badge,
+.webixbutton.button_warning.button_raised input:hover .webix_badge,
+.webix_el_button.button_warning.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_warning.button_raised button:hover .webix_badge,
+.webixbutton.button_warning.button_raised button:hover .webix_badge,
+.webix_el_button.button_warning.button_raised input:active .webix_badge,
+.webix_el_toggle.button_warning.button_raised input:active .webix_badge,
+.webixbutton.button_warning.button_raised input:active .webix_badge,
+.webix_el_button.button_warning.button_raised button:active .webix_badge,
+.webix_el_toggle.button_warning.button_raised button:active .webix_badge,
+.webixbutton.button_warning.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #ff9800;
+}
+.webix_el_button.button_warning.button_raised input:active,
+.webix_el_toggle.button_warning.button_raised input:active,
+.webixbutton.button_warning.button_raised input:active,
+.webix_el_button.button_warning.button_raised button:active,
+.webix_el_toggle.button_warning.button_raised button:active,
+.webixbutton.button_warning.button_raised button:active {
+    background-color: #e68900;
+}
+.webix_el_button.button_warning.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised input .webix_icon_btn,
+.webixbutton.button_warning.button_raised input .webix_icon_btn,
+.webix_el_button.button_warning.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_warning.button_raised button .webix_icon_btn,
+.webixbutton.button_warning.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_warning.button_raised input .webix_badge,
+.webix_el_toggle.button_warning.button_raised input .webix_badge,
+.webixbutton.button_warning.button_raised input .webix_badge,
+.webix_el_button.button_warning.button_raised button .webix_badge,
+.webix_el_toggle.button_warning.button_raised button .webix_badge,
+.webixbutton.button_warning.button_raised button .webix_badge {
+    background-color: #ffffff;
+    color: #ff9800;
+}
+.webix_el_button.button_danger input,
+.webix_el_toggle.button_danger input,
+.webixbutton.button_danger input,
+.webix_el_button.button_danger button,
+.webix_el_toggle.button_danger button,
+.webixbutton.button_danger button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    padding: 0px 12px;
+    box-shadow: none;
+    color: #ff5252;
+    background-color: transparent;
+}
+.webix_el_button.button_danger input:hover,
+.webix_el_toggle.button_danger input:hover,
+.webixbutton.button_danger input:hover,
+.webix_el_button.button_danger button:hover,
+.webix_el_toggle.button_danger button:hover,
+.webixbutton.button_danger button:hover,
+.webix_el_button.button_danger input:active,
+.webix_el_toggle.button_danger input:active,
+.webixbutton.button_danger input:active,
+.webix_el_button.button_danger button:active,
+.webix_el_toggle.button_danger button:active,
+.webixbutton.button_danger button:active {
+    color: #ffffff;
+    background-color: #ff5252;
+}
+.webix_el_button.button_danger input:hover .webix_icon_btn,
+.webix_el_toggle.button_danger input:hover .webix_icon_btn,
+.webixbutton.button_danger input:hover .webix_icon_btn,
+.webix_el_button.button_danger button:hover .webix_icon_btn,
+.webix_el_toggle.button_danger button:hover .webix_icon_btn,
+.webixbutton.button_danger button:hover .webix_icon_btn,
+.webix_el_button.button_danger input:active .webix_icon_btn,
+.webix_el_toggle.button_danger input:active .webix_icon_btn,
+.webixbutton.button_danger input:active .webix_icon_btn,
+.webix_el_button.button_danger button:active .webix_icon_btn,
+.webix_el_toggle.button_danger button:active .webix_icon_btn,
+.webixbutton.button_danger button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_danger input:hover .webix_badge,
+.webix_el_toggle.button_danger input:hover .webix_badge,
+.webixbutton.button_danger input:hover .webix_badge,
+.webix_el_button.button_danger button:hover .webix_badge,
+.webix_el_toggle.button_danger button:hover .webix_badge,
+.webixbutton.button_danger button:hover .webix_badge,
+.webix_el_button.button_danger input:active .webix_badge,
+.webix_el_toggle.button_danger input:active .webix_badge,
+.webixbutton.button_danger input:active .webix_badge,
+.webix_el_button.button_danger button:active .webix_badge,
+.webix_el_toggle.button_danger button:active .webix_badge,
+.webixbutton.button_danger button:active .webix_badge {
+    background-color: #ffffff;
+    color: #ff5252;
+}
+.webix_el_button.button_danger input:active,
+.webix_el_toggle.button_danger input:active,
+.webixbutton.button_danger input:active,
+.webix_el_button.button_danger button:active,
+.webix_el_toggle.button_danger button:active,
+.webixbutton.button_danger button:active {
+    background-color: #ff1f1f;
+}
+.webix_el_button.button_danger input .webix_icon_btn,
+.webix_el_toggle.button_danger input .webix_icon_btn,
+.webixbutton.button_danger input .webix_icon_btn,
+.webix_el_button.button_danger button .webix_icon_btn,
+.webix_el_toggle.button_danger button .webix_icon_btn,
+.webixbutton.button_danger button .webix_icon_btn {
+    color: #ff5252;
+}
+.webix_el_button.button_danger input .webix_badge,
+.webix_el_toggle.button_danger input .webix_badge,
+.webixbutton.button_danger input .webix_badge,
+.webix_el_button.button_danger button .webix_badge,
+.webix_el_toggle.button_danger button .webix_badge,
+.webixbutton.button_danger button .webix_badge {
+    background-color: #ff5252;
+    color: #ffffff;
+}
+.webix_el_button.button_danger.button_raised input,
+.webix_el_toggle.button_danger.button_raised input,
+.webixbutton.button_danger.button_raised input,
+.webix_el_button.button_danger.button_raised button,
+.webix_el_toggle.button_danger.button_raised button,
+.webixbutton.button_danger.button_raised button {
+    border-width: 0px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #004ea2;
+    background-color: transparent;
+    padding: 0px 12px;
+    box-shadow: none;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    background-color: #ff5252;
+}
+.webix_el_button.button_danger.button_raised input:hover,
+.webix_el_toggle.button_danger.button_raised input:hover,
+.webixbutton.button_danger.button_raised input:hover,
+.webix_el_button.button_danger.button_raised button:hover,
+.webix_el_toggle.button_danger.button_raised button:hover,
+.webixbutton.button_danger.button_raised button:hover,
+.webix_el_button.button_danger.button_raised input:active,
+.webix_el_toggle.button_danger.button_raised input:active,
+.webixbutton.button_danger.button_raised input:active,
+.webix_el_button.button_danger.button_raised button:active,
+.webix_el_toggle.button_danger.button_raised button:active,
+.webixbutton.button_danger.button_raised button:active {
+    color: #ffffff;
+    background-color: #ff6c6c;
+}
+.webix_el_button.button_danger.button_raised input:hover .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised input:hover .webix_icon_btn,
+.webixbutton.button_danger.button_raised input:hover .webix_icon_btn,
+.webix_el_button.button_danger.button_raised button:hover .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised button:hover .webix_icon_btn,
+.webixbutton.button_danger.button_raised button:hover .webix_icon_btn,
+.webix_el_button.button_danger.button_raised input:active .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised input:active .webix_icon_btn,
+.webixbutton.button_danger.button_raised input:active .webix_icon_btn,
+.webix_el_button.button_danger.button_raised button:active .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised button:active .webix_icon_btn,
+.webixbutton.button_danger.button_raised button:active .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_danger.button_raised input:hover .webix_badge,
+.webix_el_toggle.button_danger.button_raised input:hover .webix_badge,
+.webixbutton.button_danger.button_raised input:hover .webix_badge,
+.webix_el_button.button_danger.button_raised button:hover .webix_badge,
+.webix_el_toggle.button_danger.button_raised button:hover .webix_badge,
+.webixbutton.button_danger.button_raised button:hover .webix_badge,
+.webix_el_button.button_danger.button_raised input:active .webix_badge,
+.webix_el_toggle.button_danger.button_raised input:active .webix_badge,
+.webixbutton.button_danger.button_raised input:active .webix_badge,
+.webix_el_button.button_danger.button_raised button:active .webix_badge,
+.webix_el_toggle.button_danger.button_raised button:active .webix_badge,
+.webixbutton.button_danger.button_raised button:active .webix_badge {
+    background-color: #ffffff;
+    color: #ff5252;
+}
+.webix_el_button.button_danger.button_raised input:active,
+.webix_el_toggle.button_danger.button_raised input:active,
+.webixbutton.button_danger.button_raised input:active,
+.webix_el_button.button_danger.button_raised button:active,
+.webix_el_toggle.button_danger.button_raised button:active,
+.webixbutton.button_danger.button_raised button:active {
+    background-color: #ff3939;
+}
+.webix_el_button.button_danger.button_raised input .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised input .webix_icon_btn,
+.webixbutton.button_danger.button_raised input .webix_icon_btn,
+.webix_el_button.button_danger.button_raised button .webix_icon_btn,
+.webix_el_toggle.button_danger.button_raised button .webix_icon_btn,
+.webixbutton.button_danger.button_raised button .webix_icon_btn {
+    color: #ffffff;
+}
+.webix_el_button.button_danger.button_raised input .webix_badge,
+.webix_el_toggle.button_danger.button_raised input .webix_badge,
+.webixbutton.button_danger.button_raised input .webix_badge,
+.webix_el_button.button_danger.button_raised button .webix_badge,
+.webix_el_toggle.button_danger.button_raised button .webix_badge,
+.webixbutton.button_danger.button_raised button .webix_badge {
+    background-color: #ffffff;
+    color: #ff5252;
+}
+.solid_icon .webix_icon,
+.solid_icon.webix_icon {
+    color: #46b34b;
+}
+.solid_icon .webix_icon:hover,
+.solid_icon.webix_icon:hover {
+    color: #3fa044;
+}
+.action_icon .webix_icon:hover,
+.action_icon.webix_icon:hover {
+    color: #004ea2;
+}
+.danger_icon .webix_icon:hover,
+.danger_icon.webix_icon:hover {
+    color: #ff5252;
+}
+.webix_el_button.button_transparent input,
+.webix_el_toggle.button_transparent input,
+.webix_el_button.button_transparent button,
+.webix_el_toggle.button_transparent button,
+.webixbutton.button_transparent {
+    border-width: 1px;
+    border-radius: 2px;
+    font-family: Roboto, Arial;
+    font-size: 14px;
+    color: #097fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    color: #ffffff;
+    background-color: transparent;
+    padding: 0px 8px;
+}
+.webix_el_button.button_transparent input:hover,
+.webix_el_toggle.button_transparent input:hover,
+.webix_el_button.button_transparent button:hover,
+.webix_el_toggle.button_transparent button:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.webix_el_button.button_transparent input:active,
+.webix_el_toggle.button_transparent input:active,
+.webix_el_button.button_transparent button:active,
+.webix_el_toggle.button_transparent button:active {
+    background: rgba(0, 0, 0, 0.2);
+}

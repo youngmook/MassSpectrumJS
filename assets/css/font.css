@@ -1,0 +1,69 @@
+/**
+ * Mass Spectrum JS, a Mass Spectrum Viewer
+ * @author Young-Mook Kang <ymkang@thylove.org>
+ * @copyright 2018 Young-Mook Kang <ymkang@thylove.org>
+ * @license http://www.opensource.org/licenses/ISC The ISC License
+ * @repository https://github.com/youngmook/MassSpectrumJS
+ */
+
+/*
+* Noto Sans KR (korean) http://www.google.com/fonts/earlyaccess
+*/
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url(fonts/NotoSans/NotoSans-Thin.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Thin.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Thin.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    src: url(fonts/NotoSans/NotoSans-Light.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Light.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Light.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/NotoSans/NotoSans-Regular.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Regular.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(/fonts/NotoSans/NotoSans-Medium.woff2) format('woff2'),
+    url(/fonts/NotoSans/NotoSans-Medium.woff) format('woff'),
+    url(/fonts/NotoSans/NotoSans-Medium.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/NotoSans/NotoSans-Bold.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Bold.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Bold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: bold;
+    src: url(fonts/NotoSans/NotoSans-Black.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Black.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Black.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url(fonts/NotoSans/NotoSans-Black.woff2) format('woff2'),
+    url(fonts/NotoSans/NotoSans-Black.woff) format('woff'),
+    url(fonts/NotoSans/NotoSans-Black.otf) format('opentype');
+}
