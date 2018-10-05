@@ -1,0 +1,26 @@
+{
+  "name": "massspectrumjs",
+  "version": "0.1.0",
+  "description": "Mass Spectrum Viewer (Javascript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngmook/MassSpectrumJS.git"
+  },
+  "keywords": [
+    "mass",
+    "spectrum",
+    "viewer",
+    "javascript",
+    "js"
+  ],
+  "author": "Young-Mook Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youngmook/MassSpectrumJS/issues"
+  },
+  "homepage": "https://github.com/youngmook/MassSpectrumJS#readme"
+}
