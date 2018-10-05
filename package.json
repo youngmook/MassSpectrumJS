@@ -25,6 +25,7 @@
   "homepage": "https://github.com/youngmook/MassSpectrumJS#readme",
   "dependencies": {
     "devextreme": "18.1.6",
+    "jquery": "3.3.1",
     "webix": "5.4.0"
   }
 }
