@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/youngmook/MassSpectrumJS/issues"
   },
-  "homepage": "https://github.com/youngmook/MassSpectrumJS#readme"
+  "homepage": "https://github.com/youngmook/MassSpectrumJS#readme",
+  "dependencies": {
+    "devextreme": "18.1.6"
+  }
 }
