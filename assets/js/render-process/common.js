@@ -30,3 +30,4 @@ function isDesktopEnvironment() {
     }
     return isItDesktop;
 }
+
